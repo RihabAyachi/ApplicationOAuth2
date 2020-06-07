@@ -1,4 +1,4 @@
 ---
 applications:
 - name: push-to-cf
-- path: target/AppReview-0.0.1-SNAPSHOT.jar
+  path: target/AppReview-0.0.1-SNAPSHOT.jar
