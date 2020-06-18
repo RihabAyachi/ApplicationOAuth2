@@ -12,7 +12,7 @@ pipeline {
     		}
 		stage ('SonarQube Analysis') {
 			steps{
-				withSonarQubeEnv(credentialsId: 'sonarToken',installationName: 'sonar'){
+				withSonarQubeEnv(installationName: 'sonar'){
         				bat 'mvn sonar:sonar'
 				}
 			}
