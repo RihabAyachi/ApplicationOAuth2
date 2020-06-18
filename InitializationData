@@ -1,0 +1,26 @@
+[
+{
+    "name": "Facebook",
+    "description": "Find friends, watch live videos, play gaes & save photos in your social network",
+    "downloads": "5B+",
+    "category": "Social"
+  },
+  {
+    "name": "Twitter",
+    "description": "Breaking news, entertainment, sports, politics and everything in-between",
+    "downloads": "500M+",
+    "category": "News & Magazines"
+  },
+  {
+    "name": "Instagram",
+    "description": "Bringing you closer to the people and things you love",
+    "downloads": "1B+",
+    "category": "Social"
+  },
+  {
+    "name": "Snapchat",
+    "description": "Share the moment!",
+    "downloads": "1B+",
+    "category": "Social"
+  }
+ ]
