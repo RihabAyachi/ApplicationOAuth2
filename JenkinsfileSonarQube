@@ -30,7 +30,7 @@ pipeline {
     		stage ('Post Deployment') {
 			steps {
 				bat 'cf app push-to-cf'
-				bat 'curl -X POST "https://push-to-cf.cfapps.io/api/applications" -H "Content-Type: application/json" -d @InitializedData.json'
+				bat 'curl -X POST "https://push-to-cf.cfapps.io/api/applications" -H "Content-Type: application/json" -d @InitializationData.json'
 				}
     			}
     		}
