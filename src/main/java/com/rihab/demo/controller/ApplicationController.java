@@ -67,6 +67,18 @@ public class ApplicationController {
 		
 		return applicationRepo.save(application);
 	}
+//*********************************************************************************************************	
+	//NEW SECTION
+	@ApiOperation(value="Adds a list of applications",
+			notes = "")
+	@PostMapping("/applications/list")
+	public void createList(@ApiParam(value="", required=true) @RequestBody List<Application> appList) {
+		
+		for (Application element : appList) {
+			applicationRepo.save(element);	
+		}
+	}
+//**********************************************************************************************************
 	
 	//update section
 	@ApiOperation(value="Updates an application based on the application ID",
@@ -82,7 +94,7 @@ public class ApplicationController {
         }).orElseThrow(() -> new ResourceNotFoundException("ApplicationId " + applicationId + " not found"));
     }
 	
-	//Delete section
+	//Delete Section
 	
 	@ApiOperation(value="Removes an application",
 			notes = "Please enter the application ID")
