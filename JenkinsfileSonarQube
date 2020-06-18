@@ -5,17 +5,20 @@ pipeline {
 		jdk 'JDK_HOME'
 	}
 	stages {
-    stage ('Build') {
+    		stage ('Build') {
       			steps {
           			bat 'mvn package'
       			}
     		}
 		stage ('SonarQube Analysis') {
-      WithSonarQubeEnv('sonar'){
-        bat 'mvn sonar:sonar'
-      }
-    }
-    stage ('Deploy') {
+			steps{
+				WithSonarQubeEnv('sonar'){
+        				bat 'mvn sonar:sonar'
+				}
+			}
+		}
+		
+    		stage ('Deploy') {
 			steps {
         			withCredentials([usernamePassword(credentialsId: 'CF_Credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
 					bat 'cf login -a https://api.run.pivotal.io -u %USERNAME% -p %PASSWORD% -o rihab.ayachi'
