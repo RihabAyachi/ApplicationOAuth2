@@ -16,6 +16,7 @@ pipeline {
 				
 					bat 'cf login -a https://api.run.pivotal.io -u %USERNAME% -p %PASSWORD% -o rihab.ayachi' 
 					bat 'cf push' 
+					bat 'C:\\curl-7.70.0-win64-mingw\\bin\\curl -X POST "https://oauth2application.io/api/applications/list" -H "Content-Type: application/json" -d @InitializationData.json'
 		 		}
 			}
 		}			       
