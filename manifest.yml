@@ -1,4 +1,4 @@
 ---
 applications:
-- name: push-to-cf
+- name: Oauth2Application
   path: target/AppReview-0.0.1-SNAPSHOT.jar
